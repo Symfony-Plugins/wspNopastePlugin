@@ -1,1 +1,1 @@
-<?php echo $feed->toXml(); ?>
+<?php echo $feed->asXml(); ?>
