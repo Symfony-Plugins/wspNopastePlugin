@@ -1,0 +1,1 @@
+<?php include_partial('wspNopaste/showEntry', array('paste' => $paste)); ?>

@@ -1,0 +1,19 @@
+sfGuardUser:
+  sfGuardUser_1:
+    username: test-user
+    algorithm: sha1
+    salt: 7f3cc7787fa258b49008794cb12e3023
+    # password: test-passwd
+    password: 65aca7980ec11592691894da00b278389369b29a
+    created_at: '2009-06-20 17:49:30'
+    is_active: '1'
+    is_super_admin: '1'
+  sfGuardUser_2:
+    username: test-user-2
+    algorithm: sha1
+    salt: 7f3cc7787fa258b49008794cb12e3023
+    # password: test-passwd
+    password: 65aca7980ec11592691894da00b278389369b29a
+    created_at: '2009-06-20 17:49:30'
+    is_active: '1'
+    is_super_admin: '1'

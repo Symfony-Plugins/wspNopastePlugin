@@ -1,0 +1,24 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           wspNopasteEntry
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          wsp_nopaste_entry
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        display: [created_at, _creator, title, slug]
+      filter: ~
+      form:
+        class: wspNopasteEntryAdminForm
+      edit:
+        fields:
+          password: { params: disabled=true }
+      new: ~

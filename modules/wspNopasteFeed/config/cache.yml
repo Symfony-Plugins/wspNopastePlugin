@@ -1,0 +1,5 @@
+all:
+  enabled: on
+  with_layout: false
+  contextual: true
+  lifetime: 600

@@ -1,0 +1,22 @@
+wsp-nopaste:
+  _attributes: { package: plugins.wspNopastePlugin.lib.model }
+  nopaste_entries:
+    _attributes: { phpName: wspNopasteEntry }
+    id: ~
+    created_at: ~
+    created_by: { type: integer, required: true, index: true, default: 0 }
+    password: { type: varchar(255) }
+    language: { type: varchar(10), index: true }
+    title: { type: varchar(120) }
+    slug: { type: varchar(255), required: true, index: unique }
+    body: { type: longvarchar }
+
+  nopaste_comments:
+    _attributes: { phpName: wspNopasteComment }
+    id: ~
+    nopaste_entries_id: { phpName: NopasteEntryId, type: integer, foreignTable: nopaste_entries, foreignReference: id, onDelete: cascade }
+    created_at: ~
+    created_by: { type: integer, required: true, index: true, default: 0 }
+    nopaste_comment_id: { phpName: ReplyId, type: integer, foreignTable: nopaste_comments, foreignReference: id, onDelete: cascade }
+    title: { type: varchar(120) }
+    body: { type: longvarchar }

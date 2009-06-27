@@ -1,0 +1,22 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           wspNopasteComment
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          wsp_nopaste_comment
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        display: [created_at, _creator]
+      filter:  ~
+      form:
+        class: wspNopasteCommentAdminForm
+      edit:    ~
+      new:     ~

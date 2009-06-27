@@ -1,0 +1,181 @@
+body {
+  padding-left: 230px;
+}
+h2 {
+  background-color: #FFF;
+  border: #CCC 1px solid;
+  margin: 0px 0px 3px 0px;
+  padding: 5px;
+}
+label {
+  width: 200px !Important;
+}
+pre {
+  background-color: #FFF;
+  border: #CCC 1px solid;
+  font-size: 12px;
+  line-height: 13px !important;
+  overflow: auto;
+  padding: 5px;
+}
+#nopastemenu,
+#nopastemenu li {
+  list-style: none inside none;
+}
+#nopastemenu {
+  float: left;
+  height: 30px;
+  margin-left: -220px;
+  margin-top: 0px;
+  width: 200px;
+}
+#nopastemenu li {
+  display: block;
+  margin: 0px 0px 2px 0px;
+}
+#nopastemenu a {
+  background-color: #FFF;
+  border: #CCC 1px solid;
+  color: #444;
+  display: block;
+  padding: 3px 7px;
+  text-decoration: none;
+}
+#nopastemenu a:hover {
+  background-color: #FFE;
+  color: #000;
+}
+#nopaste-entry-list {
+  border-collapse: collapse;
+  width: 70%;
+}
+#nopaste-entry-list td:last-Child {
+  width: 70%;
+}
+#nopaste-entry-list a {
+  color: #464646;
+  text-decoration: none;
+}
+#nopaste-entry-list a:hover {
+  text-decoration: underline;
+}
+#nopaste-entry-list tr,
+#nopaste-form tr {
+  background-color: #FFFFFF;
+  border-left: #CCC 1px solid;
+  border-right: #CCC 1px solid;
+}
+#nopaste-entry-list tr:hover,
+#nopaste-form tr:hover {
+  background-color: #FFE;
+  color: #000;
+}
+#nopaste-entry-list td,
+#nopaste-entry-list th,
+#nopaste-form td,
+#nopaste-form th {
+  border-color: #CCC;
+  border-style: solid none;
+  border-width: 1px 0px;
+}
+#nopaste-entry-list th,
+#nopaste-form th {
+  background-color: #E7EEF6;
+  color: #464646;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+#nopaste-form {
+  width: 600px;
+}
+#nopaste-form tbody input {
+  width: 90%;
+}
+#nopaste-form tbody textarea {
+  height: 200px;
+  width: 90%;
+}
+.flashlist {
+  margin: 0px;
+  margin-left: -2px;
+  padding: 0px;
+  width: 602px;
+}
+.error_list,
+.error_list li,
+.flashlist,
+.flashlist li {
+  list-style: none inside none;
+}
+.error_list {
+  color: #C00;
+  display: block;
+  float: left;
+  margin-left: 10px;
+  width: 170px;
+}
+.flash {
+  background: #FFC url(../../sf/sf_admin/images/tick.png) no-repeat scroll 10px 4px;
+  border: #DDD 1px solid;
+  margin: 4px 0px;
+  padding: 5px 4px 5px 37px;
+}
+.form_error {
+  background:#FCC url(../../sf/sf_admin/images/error.png) no-repeat scroll 10px 4px;
+}
+input[type=reset] {
+  float: right;
+}
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  margin: 0px 2px 2px 0px;
+  min-width: 120px;
+  padding: 1px 2px;
+}
+
+/* comments */
+h5 {
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: normal;
+  padding-left: 10px;
+}
+body > .nopaste-comment {
+  margin: 0px 0px 10px 0px;
+}
+.nopaste-comment {
+  background-color: #EEF;
+  border: #CCC 1px solid;
+  margin: 0px 0px 5px 0px;
+  overflow: hidden;
+  padding: 5px 0px 5px 10px;
+  width: auto;
+}
+.nopaste-comment h5 {
+  margin: 0px 0px 5px 5px;
+}
+.nopaste-comment p {
+  margin: 0px 0px 5px 10px;
+  white-space: pre;
+}
+.nopaste-comment .nopaste-comment {
+  background-color: #FFE;
+  border-right: none;
+  width: auto;
+}
+h3 {
+  background-color: #FFF;
+  border: #CCC 1px solid;
+  font-size: 0.8em;
+  margin: 0px 0px 3px 0px;
+  padding: 3px 5px;
+}
+#comments {
+  font-size: 1em;
+}
+#no-comments {
+  font-style: italic;
+  padding-left: 1em;
+}

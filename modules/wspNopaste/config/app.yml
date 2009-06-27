@@ -1,0 +1,20 @@
+all:
+  wsp_nopaste_plugin:
+    feed_title: wspNopaste - Latest Entries
+    feed_link:
+    feed_description: This is an automatic RSS feed for wspNopastePlugin.
+    feed_author_email:
+    feed_author_name: wspNopasteFeed - Various Artists
+    feed_limit: 10
+
+    table_heading_all: wspNopaste - All Entries
+    table_heading_latest: wspNopaste - Latest Entries
+    list_limit: 25
+
+    form_error: This form contains invalid data!
+
+    # flash types
+    flash_notice: form_notice
+
+    # flash contents
+    flash_delete_notice: This entry has been deleted

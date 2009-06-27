@@ -1,0 +1,1 @@
+<?php include_partial('wspNopaste/form', array('form' => $form, 'formURL' => url_for('wspNopaste/create'))) ?>

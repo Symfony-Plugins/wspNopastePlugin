@@ -1,0 +1,1 @@
+<?php include_partial('wspNopaste/flash', array('flashType' => array('form_error'))) ?>
