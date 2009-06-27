@@ -13,7 +13,7 @@ class wspNopastePluginConfiguration extends sfPluginConfiguration
   static protected $DEPENDENCIES = array(
     'sfGuardPlugin' => 'user integration',
     'sfEasySyntaxHighlighterPlugin' => 'syntax highlighting',
-    'sfFeedPlugin' => 'RSS feeds',
+    'sfFeed2Plugin' => 'RSS feeds',
     'sfPropelActAsSluggableBehaviorPlugin' => 'URL slugs',
   );
 

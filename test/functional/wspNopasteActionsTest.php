@@ -89,7 +89,7 @@ $testBrowser->responseContains('value="passwd" id="wsp_nopaste_entry_password"')
 
 $testBrowser->info('Checking RSS Feed ..');
 $testBrowser->getAndCheck('wspNopasteFeed', 'latestEntries', '/wspNopasteFeed/latestEntries', 200);
-$testBrowser->isResponseHeader('Content-Type', 'application/rss+xml; charset=utf-8');
+$testBrowser->isResponseHeader('Content-Type', '/.*xml.*/');
 $testBrowser->responseContains($testEntry->getTitle());
 $testBrowser->responseContains($testEntry->getSlug());
 

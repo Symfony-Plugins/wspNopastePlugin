@@ -63,7 +63,7 @@ class wspNopasteFeedActions extends sfActions
    */
   private function getFeedInstance()
   {
-    $feed = sfFeed::newInstance('rss201rev2');
+    $feed = sfFeedPeer::newInstance(sfConfig::get('app_wsp_nopaste_plugin_feed_version', 'Rss201'));
 
     $feed->setTitle($this->getFeedTitle());
     $feed->setLink($this->getFeedLink());

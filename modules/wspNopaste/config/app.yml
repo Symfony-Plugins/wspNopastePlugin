@@ -5,6 +5,7 @@ all:
     feed_description: This is an automatic RSS feed for wspNopastePlugin.
     feed_author_email:
     feed_author_name: wspNopasteFeed - Various Artists
+    feed_version: Rss201
     feed_limit: 10
 
     table_heading_all: wspNopaste - All Entries
