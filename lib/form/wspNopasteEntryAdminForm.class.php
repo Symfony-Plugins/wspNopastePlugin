@@ -4,7 +4,7 @@
  * @link          http://toni.uebernickel.info/
  *
  * @package       wspNopastePlugin
- * @subpackage    forms
+ * @subpackage    form
  * @version       $Id$
  * @link          $HeadURL$
  */

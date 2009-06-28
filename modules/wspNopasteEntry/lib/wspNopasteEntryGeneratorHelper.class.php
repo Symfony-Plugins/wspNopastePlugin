@@ -5,8 +5,8 @@
  *
  * @package    wspNopastePlugin
  * @subpackage wspNopasteEntry
- * @author     Toni Uebernickel <tuebernickel@whitestarprogramming.de>
- * @version    SVN: $Id: helper.php 12474 2008-10-31 10:41:27Z fabien $
+ * @author     Toni Uebernickel <toni@uebernickel.info>
+ * @version    SVN: $Id$
  */
 class wspNopasteEntryGeneratorHelper extends BaseWspNopasteEntryGeneratorHelper
 {

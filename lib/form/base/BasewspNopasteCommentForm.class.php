@@ -3,10 +3,10 @@
 /**
  * wspNopasteComment form base class.
  *
- * @package    ##PROJECT_NAME##
+ * @package    wspNopastePlugin
  * @subpackage form
- * @author     ##AUTHOR_NAME##
- * @version    SVN: $Id: sfPropelFormGeneratedTemplate.php 16976 2009-04-04 12:47:44Z fabien $
+ * @author     Toni Uebernickel <toni@uebernickel.info>
+ * @version    SVN: $Id$
  */
 class BasewspNopasteCommentForm extends BaseFormPropel
 {
