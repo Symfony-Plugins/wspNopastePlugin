@@ -1,4 +1,14 @@
 <?php
+/**
+ * @author        Toni Uebernickel <toni@uebernickel.info>
+ * @link          http://toni.uebernickel.info/
+ *
+ * @package       wspNopastePlugin
+ * @subpackage    model
+ * @version       $Id$
+ * @link          $HeadURL$
+ */
+
 
 class wspNopasteEntry extends PluginwspNopasteEntry
 {

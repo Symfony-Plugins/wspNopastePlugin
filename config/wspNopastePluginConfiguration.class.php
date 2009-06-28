@@ -1,12 +1,17 @@
 <?php
+/**
+ * @author        Toni Uebernickel <toni@uebernickel.info>
+ * @link          http://toni.uebernickel.info/
+ *
+ * @package       wspNopastePlugin
+ * @subpackage    config
+ * @version       $Id$
+ * @link          $HeadURL$
+ */
 
 /**
- * wspNopastePlugin configuration.
- *
- * @package     wspNopastePlugin
- * @subpackage  config
- * @author      Toni Uebernickel
- * @version     SVN: $Id: wspNopastePluginConfiguration.class.php $
+ * The configuration of the wspNopastePlugin.
+ * Includes all dependencies.
  */
 class wspNopastePluginConfiguration extends sfPluginConfiguration
 {

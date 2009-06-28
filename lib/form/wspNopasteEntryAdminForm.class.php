@@ -1,18 +1,24 @@
 <?php
+/**
+ * @author        Toni Uebernickel <toni@uebernickel.info>
+ * @link          http://toni.uebernickel.info/
+ *
+ * @package       wspNopastePlugin
+ * @subpackage    forms
+ * @version       $Id$
+ * @link          $HeadURL$
+ */
 
 /**
- * NopasteEntry form.
- *
- * @package    ##PROJECT_NAME##
- * @subpackage form
- * @author     ##AUTHOR_NAME##
- * @version    SVN: $Id: sfPropelFormTemplate.php 10377 2008-07-21 07:10:32Z dwhittle $
+ * wspNopasteEntry administration form
  */
 class wspNopasteEntryAdminForm extends BasewspNopasteEntryForm
 {
   /**
    * add sfPropelActAsSluggableBehaviorPlugin and sfEasySyntaxHighlighter
+   * removes created_by and slug from required widgets
    *
+   * @return void
    */
   public function setup()
   {

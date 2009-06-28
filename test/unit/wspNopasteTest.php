@@ -1,4 +1,13 @@
 <?php
+/**
+ * @author        Toni Uebernickel <toni@uebernickel.info>
+ * @link          http://toni.uebernickel.info/
+ *
+ * @package       wspNopastePlugin
+ * @subpackage    unit.test
+ * @version       $Id$
+ * @link          $HeadURL$
+ */
 
 require_once(dirname(__FILE__) . '/../bootstrap/unit.php');
 

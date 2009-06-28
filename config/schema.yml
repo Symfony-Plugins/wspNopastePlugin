@@ -1,3 +1,11 @@
+# @author        Toni Uebernickel <toni@uebernickel.info>
+# @link          http://toni.uebernickel.info/
+#
+# @package       wspNopastePlugin
+# @subpackage    config
+# @version       $Id$
+# @link          $HeadURL$
+
 wsp-nopaste:
   _attributes: { package: plugins.wspNopastePlugin.lib.model }
   nopaste_entries:

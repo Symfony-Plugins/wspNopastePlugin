@@ -1,3 +1,11 @@
+# @author        Toni Uebernickel <toni@uebernickel.info>
+# @link          http://toni.uebernickel.info/
+#
+# @package       wspNopastePlugin
+# @subpackage    fixtures.data
+# @version       $Id$
+# @link          $HeadURL$
+
 sfGuardUser:
   sfGuardUser_1:
     username: test-user

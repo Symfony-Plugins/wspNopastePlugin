@@ -1,15 +1,24 @@
 <?php
+/**
+ * @author        Toni Uebernickel <toni@uebernickel.info>
+ * @link          http://toni.uebernickel.info/
+ *
+ * @package       wspNopastePlugin
+ * @subpackage    forms
+ * @version       $Id$
+ * @link          $HeadURL$
+ */
 
 /**
- * wspNopasteComment form.
- *
- * @package    ##PROJECT_NAME##
- * @subpackage form
- * @author     ##AUTHOR_NAME##
- * @version    SVN: $Id: sfPropelFormTemplate.php 10377 2008-07-21 07:10:32Z dwhittle $
+ * wspNopasteComment form
  */
 class wspNopasteCommentForm extends BasewspNopasteCommentForm
 {
+  /**
+   * remove created_at, created_by and references from form
+   *
+   * @return void
+   */
   public function setup()
   {
     parent::setup();

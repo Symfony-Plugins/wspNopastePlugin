@@ -1,12 +1,25 @@
 <?php
+/**
+ * @author        Toni Uebernickel <toni@uebernickel.info>
+ * @link          http://toni.uebernickel.info/
+ *
+ * @package       wspNopastePlugin
+ * @subpackage    plugin.model
+ * @version       $Id$
+ * @link          $HeadURL$
+ */
 
+/**
+ * wspNopastePlugin entry peer
+ */
 class PluginwspNopasteEntryPeer extends BasewspNopasteEntryPeer
 {
   /**
    * get the latest entries that are not password protected
    *
-   * @param int $limit
+   * @param int $limit defaults to unlimited
    * @param PropelPDO $con
+   *
    * @return array of wspNopasteEntry
    */
   public static function retrieveLatestEntries($limit = 0, PropelPDO $con = null)
@@ -37,8 +50,9 @@ class PluginwspNopasteEntryPeer extends BasewspNopasteEntryPeer
   /**
    * retrieve entries ordered by creation date
    *
-   * @param int $limit
+   * @param int $limit defaults to unlimited
    * @param PropelPDO $con
+   *
    * @return array of wspNopasteEntry
    */
   public static function retrieveOrderedByCreatedAt($limit = 0, PropelPDO $con = null)

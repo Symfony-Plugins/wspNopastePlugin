@@ -1,12 +1,17 @@
 <?php
+/**
+ * @author        Toni Uebernickel <toni@uebernickel.info>
+ * @link          http://toni.uebernickel.info/
+ *
+ * @package       wspNopastePlugin
+ * @subpackage    functional.test
+ * @version       $Id$
+ * @link          $HeadURL$
+ */
 
 /**
  * This class is based an sfPropelData for using database sources.
  * It provides the ability to cleanup after functional tests of wspNopastePlugin.
- *
- * @author Toni Uebernickel <tuebernickel@whitestarprogramming.de>
- * @package wspNopastePlugin
- * @subpackage test.functional
  */
 class wspNopastePropelData extends sfPropelData
 {
@@ -20,6 +25,7 @@ class wspNopastePropelData extends sfPropelData
   /**
    * set up the fixture configuration
    *
+   * @return void
    */
   public function __construct()
   {
@@ -61,6 +67,8 @@ class wspNopastePropelData extends sfPropelData
    * cleanup all a comment and its replies
    *
    * @param int $commentId
+   *
+   * @return void
    */
   private function cleanupComments($commentId)
   {
@@ -86,6 +94,7 @@ class wspNopastePropelData extends sfPropelData
    * cleanup after the wspNopaste tests
    * removes wspNopasteComment and wspNopasteEntry database entries
    *
+   * @return void
    */
   public function cleanup()
   {

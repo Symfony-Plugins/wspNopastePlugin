@@ -1,3 +1,11 @@
+# @author        Toni Uebernickel <toni@uebernickel.info>
+# @link          http://toni.uebernickel.info/
+#
+# @package       wspNopastePlugin
+# @subpackage    config
+# @version       $Id$
+# @link          $HeadURL$
+
 all:
   wsp_nopaste_plugin:
     feed_title: wspNopaste - Latest Entries
@@ -7,6 +15,7 @@ all:
     feed_author_name: wspNopasteFeed - Various Artists
     feed_version: Rss201
     feed_limit: 10
+    feed_max_description_length: off
 
     table_heading_all: wspNopaste - All Entries
     table_heading_latest: wspNopaste - Latest Entries
@@ -16,6 +25,8 @@ all:
 
     # flash types
     flash_notice: form_notice
+    flash_forbidden: form_error
 
     # flash contents
-    flash_delete_notice: This entry has been deleted
+    flash_delete_notice: This entry has been deleted.
+    flash_delete_forbidden: The requested action is forbidden.

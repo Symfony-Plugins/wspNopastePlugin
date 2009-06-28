@@ -1,12 +1,16 @@
 <?php
+/**
+ * @author        Toni Uebernickel <toni@uebernickel.info>
+ * @link          http://toni.uebernickel.info/
+ *
+ * @package       wspNopastePlugin
+ * @subpackage    actions.wspNopasteFeed.modules
+ * @version       $Id$
+ * @link          $HeadURL$
+ */
 
 /**
- * wspNopasteFeed actions.
- *
- * @package    wspNopastePlugin
- * @subpackage wspNopasteFeed
- * @author     Toni Uebernickel <tuebernickel@whitestarprogramming.de>
- * @version    SVN: $Id: actions.class.php 12479 2008-10-31 10:54:40Z fabien $
+ * wspNopasteFeed actions
  */
 class wspNopasteFeedActions extends sfActions
 {
@@ -33,6 +37,8 @@ class wspNopasteFeedActions extends sfActions
 
   /**
    * set the template for all feeds to simply output the feed
+   *
+   * @return void
    */
   public function postExecute()
   {
@@ -78,6 +84,7 @@ class wspNopasteFeedActions extends sfActions
    * get a sfFeeditem by wspNopasteEntry
    *
    * @param wspNopasteEntry $entry
+   *
    * @return sfFeedItem
    */
   private function getFeedItemByEntry(wspNopasteEntry $entry)
@@ -105,7 +112,11 @@ class wspNopasteFeedActions extends sfActions
   /**
    * add a list of wspNopasteEntry as feed items
    *
+   * @throws InvalidArgumentException If an entry of the list is invalid.
+   *
    * @param array $entryList
+   *
+   * @return void
    */
   private function addFeedItemsByList($entryList)
   {
@@ -126,7 +137,11 @@ class wspNopasteFeedActions extends sfActions
   /**
    * set up the item list
    *
+   * @throws InvalidArgumentException If the list is no array.
+   *
    * @param array $list
+   *
+   * @return void
    */
   private function setItemList($list)
   {
@@ -153,13 +168,21 @@ class wspNopasteFeedActions extends sfActions
   /**
    *
    * @param sfWebRequest $request
-   * @return
+   *
+   * @return string
    */
   public function executeLatestEntries(sfWebRequest $request)
   {
     $this->setItemList(wspNopasteEntryPeer::retrieveLatestEntries($this->getLatestEntriesLimit()));
+
+    return sfView::SUCCESS;
   }
 
+  /**
+   * get the title of the feed
+   *
+   * @return string
+   */
   private function getFeedTitle()
   {
     if (sfConfig::get('app_wsp_nopaste_plugin_feed_title'))
@@ -172,6 +195,11 @@ class wspNopasteFeedActions extends sfActions
     }
   }
 
+  /**
+   * get the link for this feed
+   *
+   * @return string
+   */
   private function getFeedLink()
   {
     if (sfConfig::get('app_wsp_nopaste_plugin_feed_link'))
@@ -184,6 +212,11 @@ class wspNopasteFeedActions extends sfActions
     }
   }
 
+  /**
+   * get the description of this feed
+   *
+   * @return string
+   */
   private function getFeedDescription()
   {
     if (sfConfig::get('app_wsp_nopaste_plugin_feed_description'))
@@ -196,6 +229,11 @@ class wspNopasteFeedActions extends sfActions
     }
   }
 
+  /**
+   * get the author's email
+   *
+   * @return string
+   */
   private function getFeedAuthorEmail()
   {
     if (sfConfig::get('app_wsp_nopaste_plugin_feed_author_email'))
@@ -208,6 +246,11 @@ class wspNopasteFeedActions extends sfActions
     }
   }
 
+  /**
+   * get the author's name
+   *
+   * @return string
+   */
   private function getFeedAuthorName()
   {
     if (sfConfig::get('app_wsp_nopaste_plugin_feed_author_name'))
@@ -220,6 +263,11 @@ class wspNopasteFeedActions extends sfActions
     }
   }
 
+  /**
+   * get the limit for latest entries feed
+   *
+   * @return int
+   */
   private function getLatestEntriesLimit()
   {
     if (is_numeric(sfConfig::get('app_wsp_nopaste_plugin_feed_limit')))
@@ -232,6 +280,13 @@ class wspNopasteFeedActions extends sfActions
     }
   }
 
+  /**
+   * modify the item description
+   *
+   * @param string $content original description/content of the feed item
+   *
+   * @return string modified content of the feed item
+   */
   private function getFeedItemDescription($content)
   {
     if (is_numeric(sfConfig::get('app_wsp_nopaste_plugin_feed_max_description_length')))
