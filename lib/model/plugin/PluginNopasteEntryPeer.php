@@ -15,6 +15,18 @@
 class PluginwspNopasteEntryPeer extends BasewspNopasteEntryPeer
 {
   /**
+   * Get a Criterion to identify an Entry having no password set.
+   *
+   * @param Criteria $criteria
+   *
+   * @return Criterion
+   */
+  protected static final function getNoPasswordCriterion($criteria)
+  {
+    return $criteria->getNewCriterion(self::PASSWORD, null, Criteria::EQUAL)->addOr($criteria->getNewCriterion(self::PASSWORD, '', Criteria::EQUAL));
+  }
+
+  /**
    * get the latest entries that are not password protected
    *
    * @param int $limit defaults to unlimited
@@ -35,7 +47,7 @@ class PluginwspNopasteEntryPeer extends BasewspNopasteEntryPeer
     }
 
     $criteria = new Criteria(self::DATABASE_NAME);
-    $criteria->add($criteria->getNewCriterion(self::PASSWORD, null, Criteria::EQUAL)->addOr($criteria->getNewCriterion(self::PASSWORD, '', Criteria::EQUAL)));
+    $criteria->add(self::getNoPasswordCriterion($criteria));
     $criteria->addDescendingOrderByColumn(self::CREATED_AT);
     $criteria->addDescendingOrderByColumn(self::ID);
 
@@ -68,6 +80,7 @@ class PluginwspNopasteEntryPeer extends BasewspNopasteEntryPeer
     }
 
     $criteria = new Criteria(self::DATABASE_NAME);
+    $criteria->add(self::getNoPasswordCriterion($criteria));
     $criteria->addDescendingOrderByColumn(self::CREATED_AT);
     $criteria->addDescendingOrderByColumn(self::ID);
 
