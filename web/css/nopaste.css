@@ -25,6 +25,7 @@ pre {
   font-size: 12px;
   line-height: 13px !important;
   overflow: auto;
+  overflow-y: hidden;
   padding: 5px;
 }
 #nopastemenu,
